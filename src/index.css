@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(auto-fill, minmax(300px 1fr));
+  gap: 1rem;
+}
