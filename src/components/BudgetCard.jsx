@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Button, Card, ProgressBar, Stack } from "react-bootstrap"
 
 import { formatter } from "../utils"
@@ -10,6 +10,7 @@ const getProgressBarVariant = (amount, max) => {
   return "danger"
 }
 
+// component
 const BudgetCard = ({ name, amount, max, gray }) => {
   const classNames = []
   if (amount > max) {

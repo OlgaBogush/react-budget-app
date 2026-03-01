@@ -12,7 +12,7 @@ const App = () => {
         <Button variant="outline-primary">Add Expense</Button>
       </Stack>
       <div className="wrapper">
-        <BudgetCard name="Entertainment" amount={1000} max={2000} />
+        <BudgetCard name="Entertainment" amount={100} max={2000} />
       </div>
     </Container>
   )
