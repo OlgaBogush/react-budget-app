@@ -1,3 +1,3 @@
 ### react-budget-app
 
-warm-kheer-30d131.netlify.app
+https://warm-kheer-30d131.netlify.app/
