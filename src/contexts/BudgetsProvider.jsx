@@ -44,9 +44,16 @@ export const BudgetsProvider = ({ children }) => {
   const deleteBudget = ({ id }) => {
     // implement deletion for expenses
     setBudgets((prev) => prev.filter((item) => item.id !== id))
+
+    setExpenses((prev) => {
+      return prev.map((item) => {
+        if (item.expenseId !== id) return item
+        return { ...item, expenseId: "Uncategorized" }
+      })
+    })
   }
 
-  const deleteExpese = ({ id }) => {
+  const deleteExpense = ({ id }) => {
     setExpenses((prev) => prev.filter((item) => item.id !== id))
   }
 
@@ -59,7 +66,7 @@ export const BudgetsProvider = ({ children }) => {
         addExpense,
         addBudget,
         deleteBudget,
-        deleteExpese,
+        deleteExpense,
       }}
     >
       {children}

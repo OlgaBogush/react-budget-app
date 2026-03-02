@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import { Button, Card, ProgressBar, Stack } from "react-bootstrap"
 
 import { formatter } from "../utils"
@@ -17,6 +17,7 @@ const BudgetCard = ({
   max,
   gray,
   onAddExpenseClick,
+  onViewExpenseClick,
   hideButtons,
 }) => {
   const classNames = []
@@ -58,7 +59,9 @@ const BudgetCard = ({
             >
               Add Expense
             </Button>
-            <Button variant="outline-secondary">View Expenses</Button>
+            <Button variant="outline-secondary" onClick={onViewExpenseClick}>
+              View Expenses
+            </Button>
           </Stack>
         )}
       </Card.Body>
