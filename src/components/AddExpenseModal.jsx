@@ -13,7 +13,7 @@ const AddExpenseModal = ({ show, handleClose, defaultBudgetId }) => {
     e.preventDefault()
     addExpense({
       description: descriptionRef.current.value,
-      amount: amountRef.current.value,
+      amount: parseInt(amountRef.current.value),
       expenseId: budgetRef.current.value,
     })
     handleClose()
@@ -43,7 +43,7 @@ const AddExpenseModal = ({ show, handleClose, defaultBudgetId }) => {
           <Form.Group className="mb-3" controlId="budgetId">
             <Form.Label>Budget</Form.Label>
             <Form.Select defaultValue={defaultBudgetId} ref={budgetRef}>
-              <option id="uncategorized">Uncategorized</option>
+              <option>Uncategorized</option>
               {budgets.map(({ id, name }) => (
                 <option key={id} value={id}>
                   {name}

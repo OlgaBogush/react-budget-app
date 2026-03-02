@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 
 export default function useLocaleStorage(key, defaultValue) {
   const [value, setValue] = useState(() => {
+    // localStorage.clear()
     const jsonValue = localStorage.getItem(key)
     if (jsonValue !== null) return JSON.parse(jsonValue)
 

@@ -22,8 +22,8 @@ export const BudgetsProvider = ({ children }) => {
   const [budgets, setBudgets] = useLocaleStorage("budgets", [])
   const [expenses, setExpenses] = useLocaleStorage("expenses", [])
 
-  const viewExpenses = (lololo) => {
-    return expenses.filter((item) => item.expenseId === lololo)
+  const viewExpenses = (idForOptionInSelect) => {
+    return expenses.filter((item) => item.expenseId === idForOptionInSelect)
   }
 
   const addExpense = ({ description, amount, expenseId }) => {
